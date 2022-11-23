@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Search for Recipes</title>
 </head>
 <body>
@@ -12,67 +14,118 @@
             <div class="logo">Recipe App</div>
 
             <div class="search-container">
-                <form action="">
-                    <input type="text" id="search-field">
-                    <button type="submit"> Search</button>
+                <form action="" id="form">
+                    <input type="text" id="search-field" placeholder="Search for meals or Keywords" >
+                    <button type="submit"> <span>Search </span> <i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
         </nav>
         <div class="search__details-container">
-            <div class="search__result-container">
+            <div class="search__result-container" id="search-result">
+                <a href="#meal-details">
+                    <div class="search-result">
+                        <div class="img-box">
+                            <img src="./image/pizza.jpg" alt="pizza">
+                        </div>
+                        <div class="details">
+                            <h1>Pizza Express Magherita</h1>
+                            <h3>Miscellaneous Italian</h3>
+                        </div>
+                        
+                    </div>
+                </a>
+              
+
                <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
                </div>
 
                <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
                </div>
 
                <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
                </div>
 
                <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
                </div>
 
-               <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
-               </div>
+               <!-- <div class="search-result">
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
+               </div> -->
 
                <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+                <div class="img-box">
+                    <img src="./image/pizza.jpg" alt="pizza">
+                </div>
+                <div class="details">
+                    <h1>Pizza Express Magherita</h1>
+                    <h3>Miscellaneous Italian</h3>
+                </div>
+                
                </div>
 
-               <div class="search-result">
-                <img src="./image/pizza.jpg" alt="pizza">
-                <h1>Pizza Express Magherita</h1>
-                <h3>Miscellaneous Italian</h3>
+               <div class="pagination">
+                <div id="paginate-left" class="paginate">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div id="paginate-right" class="paginate">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
                </div>
             </div>
 
-            <div class="single__search-result">
-                <img src="./image/menu-burger.jpg" alt="Burger">
-                <h1>Pizza Express Magherita</h1>
-                <div class="meal-details">
+            <div class="single__search-result" id="meal-details">
+                <div class="img-box">
+                    <img src="./image/menu-burger.jpg" alt="Burger">
+                    <h1>Pizza Express Magherita</h1>
+                </div>
+                
+                
+                <div class="meal-details" >
                     <div class="instructions">
                         <ul>
-                            <li>
+                            <li class="main-head" id="main-head">
                                 
-                                How to Prepare
-                                <ul>
+                              <div class="flex">Measurement <i class="fa-solid fa-caret-down " id="dropdown"></i></div> 
+                                <ul class="sub-head" id="sub-head">
                                     <li>Sugar - 1 tsp</li>
                                     <li>Yeast - 15g</li>
                                     <li>Mozzarella - 70g</li>
@@ -83,10 +136,95 @@
                                 </ul>
                             </li>
                         </ul>
+                        <ul>
+                            <li class="main-head" id="main-head-1">
+                                
+                                <div class="flex"> How to Cook<i class="fa-solid fa-caret-down" id="dropdown-1"></i></div> 
+
+                                <ul class="sub-head" id="sub-head-1">
+                                    <li>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur omnis dolorem officia fugit quo officiis recusandae veritatis expedita, optio, sint aut dolores, adipisci ullam cupiditate! Culpa error sed ratione, officia ea reiciendis natus optio dolore, quasi vero rem beatae accusantium esse quaerat quae sunt explicabo fugiat molestias, possimus atque voluptatem laboriosam ut? Facilis explicabo odio libero veniam. Quos, cupiditate molestias?
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="add-btn-container">
+                            <a href="#wishlist">
+                                <button type="submit" class="add-recipe-btn" id="add-recipe-btn">Add Recipe To Your Wishlist</button>
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist-container" id="wishlist">
+
+                <h1>Your Recipe Wishlist</h1>
+                <div class="wishlist">
+                    <p>
+                      Sugar 
+                    </p>
+                    <p>1 tsp</p>
+                </div>
+
+                <div class="wishlist">
+                     <p>Yeast</p>
+                     <p> 15g</p>
+                </div>
+
+                <div class="wishlist">
+                    <p>
+                      Sugar 
+                    </p>
+                    <p>1 tsp</p>
+                </div>
+
+                <div class="wishlist">
+                     <p>Yeast</p>
+                     <p> 15g</p>
+                </div>
+
+                <div class="wishlist">
+                    <p>
+                      Sugar 
+                    </p>
+                    <p>1 tsp</p>
+                </div>
+
+                <div class="wishlist">
+                     <p>Yeast</p>
+                     <p> 15g</p>
+                </div>
+
+                <div class="wishlist">
+                    <p>
+                      Sugar 
+                    </p>
+                    <p>1 tsp</p>
+                </div>
+
+                <div class="wishlist">
+                     <p>Yeast</p>
+                     <p> 15g</p>
+                </div>
+
+                <div class="pagination">
+                    <div id="paginate-left" class="paginate">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div id="paginate-right" class="paginate">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
+    <script src="recipe.js"></script>
 </body>
 </html>
