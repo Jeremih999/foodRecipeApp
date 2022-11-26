@@ -212,6 +212,10 @@ li{
     height: max-content;
 }
 
+#heading-text{
+    color: #010101;
+}
+
 
 
 @media screen and (max-width:1050px) {
@@ -239,6 +243,7 @@ li{
         border-radius: 20px;
         border: none;
         width: 17rem;
+        color: #010101;
     }
 
     .search-container button {
