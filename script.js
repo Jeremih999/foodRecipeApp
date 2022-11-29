@@ -2,7 +2,17 @@ var dropdown= document.getElementById('dropdown');
 var dropdown_1= document.getElementById('dropdown-1');
 var count = 1;
 var count_1 = 1;
+var search_result= document.getElementById("search-result")
+var container = document.getElementById("container")
+console.log(search_result.childNodes.length)
 
+if (search_result.childNodes.length == 0) {
+  console.log('itis empty')
+  container.style.visibility = "hidden"
+
+}else{
+  container.style.visibility = "visible"
+}
 
 document.getElementById('main-head').addEventListener('click', function () {
    

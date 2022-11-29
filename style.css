@@ -108,6 +108,7 @@ nav{
     justify-content: space-around;
     padding: 1rem 0rem;
     border: 1px solid #0101012c;
+    display: none;
 }
 
 .single__search-result .img-box{
@@ -122,6 +123,9 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     transform: rotateX('30');
+    color: #fff;
+    background-color: #01010163;
+    padding: 1rem;
 }
 
 .meal-details{
@@ -263,6 +267,10 @@ li{
     .single__search-result .img-box{
         height: 30rem;
     }
+
+    .single__search-result{
+        height: max-content;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -308,7 +316,7 @@ li{
     }
 
     .single__search-result {
-        height: 100vh;
+        height: max-content;
     }
 
 }
