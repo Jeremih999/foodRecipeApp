@@ -7,6 +7,17 @@ var Instructions  = document.getElementById('sub-head-1')
 var container = document.getElementById("container")
 var meal_details = document.getElementById('meal-details')
 var wishlist = document.getElementById('wishlist')
+var add = document.getElementById("add-recipe-btn")
+
+
+search.addEventListener("input", function () {
+    search_result.innerHTML = " "
+
+    container.style.visibility = "visible"
+    meal_details.style.visibility = "hidden"
+    wishlist.style.visibility = "hidden"
+})
+
 
 // console.log(search.value)
 form.addEventListener('submit', function (e) {
@@ -62,9 +73,7 @@ form.addEventListener('submit', function (e) {
                 search.appendChild(details)
                 a.appendChild(search)
                 search_result.prepend(a)
-                container.style.visibility = "visible"
-                meal_details.style.visibility = "hidden"
-                wishlist.style.visibility = "hidden"
+                
 
             //     var meal = `<a href="#meal-details">
             //     <div class="search-result">
@@ -100,6 +109,7 @@ form.addEventListener('submit', function (e) {
     })
 
     search.value = ""
+   
 })
 
 
@@ -151,7 +161,7 @@ function pushed(data) {
          img_box.innerHTML =    `<img src="${data.strMealThumb}" alt="${data.strMeal}"> 
                                    <h1>${data.strMeal}</h1> `;
 
-         ingredients_list.innerHTML = `<ul>
+         ingredients_list.innerHTML = `<ul >
                                      ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
                                   </ul>`
          
@@ -160,7 +170,24 @@ function pushed(data) {
 }
 
 
+add.addEventListener("click", function () {
+    var ing = Array.from(ingredients_list)
+    console.log(ing)
+    // fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${e.target.id}`)
+    // .then(res => res.json())
+    // .then(data =>{
+    //   const meal = data.meals[0];
 
+    //     // console.log(data)
+    //     // pushed(meal)
+    //     // meal_details.style.visibility = "visible"
+
+    //     // console.log(data.strIngredient[1])
+    // })
+    wishlist.style.visibility = "visible"
+    // wishlist.innerHTML = '<li>Double Cream - 300ml </li>'
+
+})
 
 
 
